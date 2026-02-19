@@ -6,8 +6,8 @@ name: AI Auto Generate Articles
 
 on:
   schedule:
-    # 每 5 分钟执行一次 (GitHub Actions 最小间隔)
-    - cron: '*/5 * * * *'
+    # 每 1 分钟执行一次
+    - cron: '* * * * *'
   workflow_dispatch:
     inputs:
       article_count:
