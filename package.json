@@ -7,7 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "generate-article": "node tools/generate-article.js"
+    "generate-article": "node tools/generate-article.js",
+    "auto-write": "node tools/auto-writer.js"
   },
   "hexo": {
     "version": "7.3.0"

@@ -1,6 +1,7 @@
 # ============================================================
-# GitHub Actions: AI 自动生成文章 + 构建部署
-# 触发条件: 每 5 分钟定时执行 / 手动触发
+# GitHub Actions: AI 全自动生成文章 + 构建部署
+# 使用 DeepSeek AI 自动生成、自动分类、自动部署
+# 触发: 每 1 分钟定时 / 手动触发
 # ============================================================
 name: AI Auto Generate Articles
 
@@ -20,6 +21,7 @@ on:
           - '2'
           - '3'
           - '5'
+          - '10'
 
 permissions:
   contents: write
@@ -33,6 +35,8 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.check.outputs.changed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -49,11 +53,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate articles with DeepSeek AI
+      - name: 🤖 AI 全自动生成文章
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           ARTICLE_COUNT: ${{ github.event.inputs.article_count || '1' }}
-        run: node tools/generate-article.js
+        run: node tools/auto-writer.js
 
       - name: Check for new articles
         id: check
@@ -64,7 +68,8 @@ jobs:
             echo "📭 没有新文章生成"
           else
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "📬 检测到新文章"
+            NEW_COUNT=$(git diff --cached --name-only | grep "source/_posts/" | wc -l)
+            echo "📬 检测到 ${NEW_COUNT} 篇新文章"
           fi
 
       - name: Commit and push
@@ -73,15 +78,14 @@ jobs:
           git config user.name "AI Article Bot"
           git config user.email "bot@github.com"
           ARTICLE_COUNT=$(git diff --cached --name-only | grep "source/_posts/" | wc -l)
-          git commit -m "🤖 AI 自动生成 ${ARTICLE_COUNT} 篇技术文章 [$(date '+%Y-%m-%d %H:%M')]"
+          git commit -m "🤖 AI 全自动生成 ${ARTICLE_COUNT} 篇技术文章 [$(date '+%Y-%m-%d %H:%M')]"
           git push
 
-  # 构建并部署到 GitHub Pages（仅在有新文章时）
+  # 构建并部署到 GitHub Pages
   build-deploy:
     needs: generate
+    if: needs.generate.outputs.changed == 'true'
     runs-on: ubuntu-latest
-    # 始终运行构建，因为 push 会触发 deploy-github-pages workflow
-    # 这里主要为了保证新文章被正确构建
     steps:
       - name: Checkout (latest with new articles)
         uses: actions/checkout@v4
