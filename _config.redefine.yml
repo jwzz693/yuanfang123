@@ -1,0 +1,348 @@
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+# THEME REDEFINE CONFIGURATION FILE V2
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# BASIC INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+info:
+  title: 远方技术站
+  subtitle: 分享技术，记录成长
+  author: 远方
+  url: https://jwzz693.github.io/yuanfang123/
+# BASIC INFORMATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# IMAGE CONFIGURATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+defaults:
+  favicon: https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/72x72/1f680.png
+  logo: 
+  avatar: https://q1.qlogo.cn/g?b=qq&nk=0&s=640
+# IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# COLORS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+colors:
+  primary: "#4c8dae"
+  secondary:
+  default_mode: light
+# COLORS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# SITE CUSTOMIZATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+global:
+  fonts:
+    chinese: 
+      enable: false
+      family:
+      url:
+    english: 
+      enable: false
+      family:
+      url:
+    title:
+      enable: false
+      family:
+      url:
+  content_max_width: 1000px
+  sidebar_width: 210px
+  hover:
+    shadow: true
+    scale: false
+  scroll_progress:
+    bar: true
+    percentage: true
+  website_counter:
+    url: https://cn.vercount.one/js
+    enable: true
+    site_pv: true
+    site_uv: true
+    post_pv: true
+  single_page: true
+  preloader:
+    enable: false
+    custom_message:
+  side_tools:
+    gear_rotation: true
+    auto_expand: false
+  open_graph:
+    enable: true
+    image:
+    description: 远方技术站 - 分享前端、后端、DevOps 等技术文章与教程
+  google_analytics:
+    enable: false
+    id:
+# SITE CUSTOMIZATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# FONTAWESOME >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+fontawesome:
+  thin: false
+  light: false
+  duotone: false
+  sharp_solid: false
+# FONTAWESOME <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# HOME BANNER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+home_banner:
+  enable: true
+  style: fixed
+  image: 
+    light: /images/wallhaven-wqery6-light.webp
+    dark: /images/wallhaven-wqery6-dark.webp
+  title: 远方技术站
+  subtitle:
+    text:
+      - "探索技术的无限可能"
+      - "分享前端、后端、DevOps 实战经验"
+      - "每一行代码都是通往远方的路"
+    hitokoto:
+      enable: false
+      show_author: false
+      api: https://v1.hitokoto.cn
+    typing_speed: 100
+    backing_speed: 80
+    starting_delay: 500
+    backing_delay: 1500
+    loop: true
+    smart_backspace: true
+  text_color: 
+    light: "#fff"
+    dark: "#d1d1b6"
+  text_style: 
+    title_size: 2.8rem
+    subtitle_size: 1.5rem
+    line_height: 1.2
+  custom_font: 
+    enable: false
+    family: 
+    url:
+  social_links:
+    enable: true
+    style: default
+    links:
+      github: https://github.com/jwzz693
+      email: 
+    qrs:
+# HOME BANNER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# NAVIGATION BAR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+navbar:
+  auto_hide: false
+  color:
+    left: "#f78736"
+    right: "#367df7"
+    transparency: 35
+  width:
+    home: 1200px
+    pages: 1000px
+  links:
+    首页: 
+      path: / 
+      icon: fa-regular fa-house
+    归档: 
+      path: /archives 
+      icon: fa-regular fa-archive
+    分类: 
+      path: /categories 
+      icon: fa-regular fa-folder
+    标签: 
+      path: /tags 
+      icon: fa-regular fa-tags
+    关于: 
+      path: /about 
+      icon: fa-regular fa-user
+  search:
+    enable: true
+    preload: true
+# NAVIGATION BAR <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# HOME PAGE ARTICLE SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+home:
+  sidebar:
+    enable: true
+    position: left
+    first_item: menu
+    announcement: "欢迎来到远方技术站！本站自动部署到 GitHub Pages、Netlify、Vercel、Cloudflare Pages 四大平台。"
+    show_on_mobile: true
+    links:
+      归档: 
+        path: /archives 
+        icon: fa-regular fa-archive
+      标签: 
+        path: /tags 
+        icon: fa-regular fa-tags
+      分类: 
+        path: /categories 
+        icon: fa-regular fa-folder
+  article_date_format: auto
+  excerpt_length: 200
+  categories:
+    enable: true
+    limit: 3
+  tags:
+    enable: true
+    limit: 3
+# HOME PAGE ARTICLE SETTINGS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# ARTICLE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+articles:
+  style:
+    font_size: 16px
+    line_height: 1.5
+    image_border_radius: 14px
+    image_alignment: center
+    image_caption: false
+    link_icon: true
+    delete_mask: false
+    title_alignment: left
+    headings_top_spacing:
+      h1: 3.2rem
+      h2: 2.4rem
+      h3: 1.9rem
+      h4: 1.6rem
+      h5: 1.4rem
+      h6: 1.3rem
+  word_count:
+    enable: false
+    count: true
+    min2read: true
+  author_label: 
+    enable: true
+    auto: false
+    list: []
+  code_block:
+    copy: true
+    style: mac
+    highlight_theme:
+      light: github
+      dark: vs2015
+    font:
+      enable: false
+      family:
+      url:
+  toc:
+    enable: true
+    max_depth: 3
+    number: false
+    expand: true
+    init_open: true
+  copyright:
+    enable: true
+    default: cc_by_nc_sa
+  lazyload: true
+  pangu_js: true
+  recommendation:
+    enable: false
+    title: 推荐阅读
+    limit: 3
+    mobile_limit: 2
+    placeholder: /images/wallhaven-wqery6-light.webp
+    skip_dirs: []
+# ARTICLE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# COMMENT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+comment:
+  enable: false
+  system: waline
+  config:
+    waline:
+      serverUrl: 
+      lang: zh-CN
+      emoji: []
+      recaptchaV3Key:
+      turnstileKey:
+      reaction: false
+    gitalk:
+      clientID:
+      clientSecret:
+      repo:
+      owner:
+      proxy:
+    twikoo:
+      version: 1.6.10
+      server_url:
+      region:
+    giscus:
+      repo:
+      repo_id:
+      category:
+      category_id:
+      mapping: pathname
+      strict: 0
+      reactions_enabled: 1
+      emit_metadata: 0
+      lang: zh-CN
+      input_position: bottom
+      loading: lazy
+# COMMENT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# FOOTER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+footer:
+  runtime: true
+  icon: '<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>'
+  start: 2025/01/01 00:00:00
+  statistics: true
+  customize: "自动部署到 GitHub Pages | Netlify | Vercel | Cloudflare Pages"
+  icp:
+    enable: false
+    number:
+    url:
+# FOOTER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# INJECT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+inject:
+  enable: false
+  head: 
+    -
+    -
+  footer:
+    -
+    -
+# INJECT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# PLUGINS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+plugins:
+  feed:
+    enable: false
+  aplayer:
+    enable: false
+    type: fixed
+    audios:
+      - name:
+        artist:
+        url:
+        cover:
+        lrc:
+  mermaid:
+    enable: false
+    version: "11.4.1"
+# PLUGINS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# PAGE TEMPLATES >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+page_templates:
+  friends_column: 2
+  tags_style: blur
+# PAGE TEMPLATES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# CDN >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+cdn:
+  enable: false
+  provider: npmmirror
+  custom_url: 
+# CDN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
+
+
+# DEVELOPER MODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
+developer:
+  enable: false
+# DEVELOPER MODE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
