@@ -207,13 +207,13 @@ class ArticleManager {
     return `${slug}-${ts}.md`;
   }
 
-  // 生成日期
+  // 生成日期 (北京时间 UTC+8)
   generateDate() {
     const now = new Date();
-    const offset = Math.floor(Math.random() * 7); // 最近 7 天内
-    const date = new Date(now.getTime() - offset * 24 * 60 * 60 * 1000);
+    // 转换为北京时间 (UTC+8)
+    const bjTime = new Date(now.getTime() + 8 * 60 * 60 * 1000);
     const pad = n => String(n).padStart(2, '0');
-    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}`;
+    return `${bjTime.getUTCFullYear()}-${pad(bjTime.getUTCMonth() + 1)}-${pad(bjTime.getUTCDate())} ${pad(bjTime.getUTCHours())}:${pad(bjTime.getUTCMinutes())}:${pad(bjTime.getUTCSeconds())}`;
   }
 
   // 保存文章

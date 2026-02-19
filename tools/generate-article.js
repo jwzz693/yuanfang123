@@ -231,17 +231,16 @@ function slugify(text) {
     .substring(0, 80);
 }
 
-// 生成随机日期 (最近30天内)
+// 生成当前北京时间 (UTC+8)
 function randomRecentDate() {
   const now = new Date();
-  const daysAgo = Math.floor(Math.random() * 30);
-  const date = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
-  const y = date.getFullYear();
-  const m = String(date.getMonth() + 1).padStart(2, '0');
-  const d = String(date.getDate()).padStart(2, '0');
-  const h = String(Math.floor(Math.random() * 14) + 8).padStart(2, '0'); // 8-22 时
-  const min = String(Math.floor(Math.random() * 60)).padStart(2, '0');
-  const s = String(Math.floor(Math.random() * 60)).padStart(2, '0');
+  const bjTime = new Date(now.getTime() + 8 * 60 * 60 * 1000);
+  const y = bjTime.getUTCFullYear();
+  const m = String(bjTime.getUTCMonth() + 1).padStart(2, '0');
+  const d = String(bjTime.getUTCDate()).padStart(2, '0');
+  const h = String(bjTime.getUTCHours()).padStart(2, '0');
+  const min = String(bjTime.getUTCMinutes()).padStart(2, '0');
+  const s = String(bjTime.getUTCSeconds()).padStart(2, '0');
   return `${y}-${m}-${d} ${h}:${min}:${s}`;
 }
 
