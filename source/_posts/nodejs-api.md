@@ -64,7 +64,7 @@ npm install -D typescript ts-node-dev @types/node @types/express \
 
 ## 2. 项目结构
 
-```
+```text
 src/
 ├── config/           # 配置
 │   └── env.ts

@@ -72,7 +72,7 @@ GitHub Flow 是一种更简洁的工作流，只有一个主分支 `main`。
 
 推荐使用 [Conventional Commits](https://www.conventionalcommits.org/) 规范：
 
-```
+```text
 <type>(<scope>): <description>
 
 [optional body]
@@ -83,7 +83,7 @@ GitHub Flow 是一种更简洁的工作流，只有一个主分支 `main`。
 常用 type：
 
 | Type | 说明 |
-|------|------|
+| ------ | ------ |
 | `feat` | 新功能 |
 | `fix` | 修复 Bug |
 | `docs` | 文档更新 |

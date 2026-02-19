@@ -79,7 +79,7 @@ cover: https://picsum.photos/seed/xxx/800/400  # 封面图
 
 ### 工作原理
 
-```
+```text
 每 5 分钟 GitHub Actions 定时触发
         ↓
   DeepSeek AI API 生成文章
@@ -117,6 +117,7 @@ ARTICLE_COUNT=3 node tools/generate-article.js
 ### 话题覆盖范围
 
 脚本内置 100+ 随机话题，涵盖：
+
 - **前端**：React、Vue、Next.js、Tailwind CSS、TypeScript、Svelte...
 - **后端**：Node.js、Go、Python、Rust、Java、NestJS...
 - **数据库**：PostgreSQL、Redis、MongoDB、Elasticsearch...
@@ -129,7 +130,7 @@ ARTICLE_COUNT=3 node tools/generate-article.js
 
 ### 部署流程
 
-```
+```text
 git push / AI 自动生成 → main 分支
         ↓
   GitHub Actions 自动触发
@@ -187,7 +188,7 @@ Pages                    Pages
 
 ## 📁 项目结构
 
-```
+```text
 .
 ├── .github/workflows/          # GitHub Actions 工作流
 │   ├── auto-generate.yml       # 🤖 AI 定时自动生成文章
@@ -205,7 +206,7 @@ Pages                    Pages
 ├── tools/
 │   └── generate-article.js     # 🤖 AI 文章生成脚本
 ├── _config.yml                 # Hexo 主配置
-├── _config.redefine.yml        # Redefine 主题配置
+├── _config.terminal.yml        # Terminal 主题配置
 ├── netlify.toml                # Netlify 配置
 ├── vercel.json                 # Vercel 配置
 └── package.json
@@ -216,6 +217,7 @@ Pages                    Pages
 ### 修改站点信息
 
 编辑 `_config.yml`：
+
 ```yaml
 title: 你的站点名称
 subtitle: 副标题
@@ -225,18 +227,19 @@ author: 你的名字
 
 ### 修改主题配置
 
-编辑 `_config.redefine.yml`，可以自定义：
+编辑 `_config.terminal.yml`，可以自定义：
+
 - 导航菜单、头像、社交链接
 - Banner 图、代码高亮风格
 - 侧边栏、页脚信息
 - 暗黑模式、搜索功能等
 
-详细配置参考 [Redefine 官方文档](https://redefine-docs.ohevan.com/)。
+详细配置参考 [Terminal 主题](https://github.com/nicktinkink/hexo-theme-terminal)。
 
 ## 📜 常用命令
 
 | 命令 | 说明 |
-|------|------|
+| ------ | ------ |
 | `npx hexo new post "标题"` | 新建文章 |
 | `npx hexo new page "名称"` | 新建页面 |
 | `npx hexo server` | 本地预览 (localhost:4000) |

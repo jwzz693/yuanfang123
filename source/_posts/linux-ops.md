@@ -38,7 +38,8 @@ ssh user@server_ip
 ### 1.2 SSH 配置优化
 
 编辑 `~/.ssh/config`：
-```
+
+```text
 Host myserver
     HostName 192.168.1.100
     User deploy
@@ -93,7 +94,7 @@ chown -R deploy:deploy /var/www/app
 ### 权限数字对照
 
 | 数字 | 权限 | 说明 |
-|------|------|------|
+| ------ | ------ | ------ |
 | 7 | rwx | 读+写+执行 |
 | 6 | rw- | 读+写 |
 | 5 | r-x | 读+执行 |

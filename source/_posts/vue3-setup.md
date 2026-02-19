@@ -52,7 +52,7 @@ npm install @element-plus/icons-vue
 
 ## 3. 项目目录结构
 
-```
+```text
 src/
 ├── api/              # API 接口
 │   ├── index.ts
