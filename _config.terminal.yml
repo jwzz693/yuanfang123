@@ -1,0 +1,24 @@
+# Terminal 主题配置
+title: 远方技术站
+author: 远方
+
+# 顶部导航
+menus:
+  首页: /
+  文章: /archives/
+  分类: /categories/
+  标签: /tags/
+  关于: /about/
+  GitHub: https://github.com/jwzz693
+
+# Favicon
+favicon: '/favicon.png'
+
+# 底部链接
+footers:
+  '&copy; 2026 远方技术站': https://jwzz693.github.io/yuanfang123/
+  'GitHub': https://github.com/jwzz693
+
+# Google Analytics
+# google_analytics:
+#   tracking_id: G-XXXXXXXXX
